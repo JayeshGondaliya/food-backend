@@ -17,13 +17,13 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin:'food-frontend-smoky.vercel.app',
+    origin:'https://food-frontend-smoky.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // include OPTIONS
   },
 });
 
 // CORS middleware – must come before routes
-app.use(cors({ origin: process.env.CLIENT_URL || 'food-frontend-smoky.vercel.app' }));
+app.use(cors({ origin: process.env.CLIENT_URL || 'https://food-frontend-smoky.vercel.app' }));
 app.use(express.json());
 
 // Make io accessible in controllers
