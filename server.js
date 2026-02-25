@@ -23,7 +23,7 @@ const io = new Server(server, {
 });
 
 // CORS middleware – must come before routes
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:8080' }));
+app.use(cors({ origin: process.env.CLIENT_URL || 'food-frontend-smoky.vercel.app' }));
 app.use(express.json());
 
 // Make io accessible in controllers
