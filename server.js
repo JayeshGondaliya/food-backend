@@ -23,7 +23,7 @@ const io = new Server(server, {
 });
 
 // CORS middleware – must come before routes
-app.use(cors({ origin: 'https://food-frontend-er67.vercel.app/' }));
+app.use(cors({ origin: 'https://food-frontend-er67.vercel.app' }));
 app.use(express.json());
 
 // Make io accessible in controllers
